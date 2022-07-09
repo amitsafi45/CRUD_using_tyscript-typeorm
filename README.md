@@ -1,2 +1,2 @@
-# CRUD_using_tyscript-typeorm
-CRUD_using_tyscript&amp;typeorm
+# CRUD_using_typescript-typeorm
+CRUD_using_typescript&amp;typeorm
