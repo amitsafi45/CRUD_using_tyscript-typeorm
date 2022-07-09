@@ -1,10 +1,9 @@
-import {Entity,Column,BaseEntity, PrimaryGeneratedColumn} from 'typeorm'
+import {Entity,Column,PrimaryGeneratedColumn} from 'typeorm'
 @Entity()
-export default class User extends BaseEntity{
-    @PrimaryGeneratedColumn('increment')
+export default class User {
+    @PrimaryGeneratedColumn()
     "id":number
-    
-    @Column()
+     @Column()
     "name":string;
     @Column()
     "age":number;

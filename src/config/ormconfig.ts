@@ -1,10 +1,9 @@
 //import Connection from 'mysql2/typings/mysql/lib/Connection'
-import {createConnection} from 'typeorm'
+import { DataSource} from 'typeorm'
 import User from '../Entity/User'
-export default async()=>{
+//export default async()=>{
     //const user=new User()
-    try{
-   const connected= await createConnection({
+    const dataSource= new DataSource({
     name:"firstconnection",
     type: "mysql", 
     host: "localhost", 
@@ -16,11 +15,10 @@ export default async()=>{
     logging:true,
     entities:[User]
     })
-    }
-    catch(error){
-        console.log(error)
-    } 
-
+    // await dataSource.initialize()
+        
+    
+export default dataSource
     
 
-}
+//}

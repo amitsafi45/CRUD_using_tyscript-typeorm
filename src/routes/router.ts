@@ -1,9 +1,11 @@
-import express,{Router} from 'express'
+import {Request,Response} from 'express'
+import express from 'express'
 import Controller from '../controller/controller'
+//import User from '../Entity/User'
 const router =express.Router()
-router.post('/add',Controller.insert)
+router.post('/add',Controller.add)
 router.get('/show',Controller.show)
-router.post('/update',Controller.update)
-router.delete('/delete',Controller.delete)
-router .get('/find',Controller.find)
+router.patch('/update/:id',Controller.update)
+router.delete('/delete/:id',Controller.delete)
+router .get('/find/:id',Controller.find)
 export default router
